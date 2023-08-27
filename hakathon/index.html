@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Site</title>
+	<link rel="stylesheet" href="./index.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body class="overflow-x-hidden">
+	<nav class="navbar navbar-expand-lg bg-primary ">
+		<div class="container-fluid mx-5">
+			<a class="navbar-brand fw-semibold text-white" href="./index.html">BLOGGER</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mb-2 mb-lg-0">
+					<li class="nav-item mx-2">
+						<a id="allBtn" class="nav-link text-white">All Blogs</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item mx-2 ">
+						<a id="myBtn" class="nav-link text-white">My Blogs</a>
+					</li>
+					<li class="nav-item mx-2">
+						<a id="currUser" class="nav-link text-white fw-bold"></a>
+						<button type="button" class="d-none btn btn-primary" id="goToAuth">Sign In</button>
+					</li>
+					
+				</ul>
+				<ul id="prof" class="navbar-nav">
+					<li class="nav-item  dropstart">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  <img id="avatar" src="" width="40" height="40" class="rounded-circle">
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					  <a class="dropdown-item" href="./profile.html">Edit Profile</a>
+					  <a class="dropdown-item link-danger fw-bold" id="signOut">Log Out</a>
+					</div>
+				  </li>   
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<div id="allBlogs" class="">
+		<div class="container-fluid bg-body-tertiary p-3">
+			<p class="fst-italic fs-2 fw-bold m-0 headPadd">Good Morning Reader!</p>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-1"></div>
+			<div class="col-10 col-lg-8 bg-body-secondary blogPadd">
+				<p class="fst-italic fs-3 fw-bold m-0 mb-1 mt-3">All Blogs</p>
+				<div id="allBlogContainer" class="mb-2">
+					<!-- blog -->
+				</div>
+			</div>
+			<div class="col-lg-2 col-1"></div>
+		</div>
+	</div>
+	<div id="userBlogs" class="d-none">
+		<div class="container-fluid bg-body-tertiary p-3">
+			<a id="backToAll" class="link-primary text-decoration-none  fst-italic fs-2 fw-bold m-0 headPadd"><i
+					class="fa-solid fa-chevron-left me-2 fs-3"></i>Back to all blogs</a>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-1"></div>
+			<div class="col-10 col-lg-8 bg-body-secondary blogPadd">
+				<p class="fst-italic fs-3 fw-bold m-0 mb-1 mt-3">All blogs from <span id="user"></span></p>
+				<div id="userBlogContainer" class="mb-2">
+					<!-- blog -->
+				</div>
+			</div>
+			<div class="col-lg-2 col-1"></div>
+		</div>
+	</div>
+	<div id="myBlogs" class="d-none">
+		<div class="container-fluid bg-body-tertiary p-3">
+			<p class="fst-italic fs-2 fw-bold m-0 headPadd">Dashboard</p>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-1"></div>
+			<div class="col-10 col-lg-8 bg-body-secondary blogPadd">
+				<div class="bg-body-tertiary p-3 border border-white rounded shadow-lg mb-5 mt-2">
+					<form>
+						<div class="mb-3">
+							<label for="blogTitle" class="form-label">Title</label>
+							<input type="text" class="form-control" id="blogTitle" maxlength="50" minlength="5"
+								required>
+							<div id="titleChCount" class="form-text">0/50</div>
+						</div>
+						<div class="mb-3">
+							<label for="blogContent" class="form-label">Content</label>
+							<textarea type="text" class="form-control" id="blogContent"
+								placeholder="What's on your mind" minlength="100" maxlength="3000" required
+								style="min-height: 200px; max-height: 500px;"></textarea>
+							<div id="ContentChCount" class="form-text">0/3000</div>
+						</div>
+						<button id="publish" type="button" class="btn btn-primary">Publish Blog</button>
+						<button id="cancel" type="button" class="btn btn-danger">Cancel</button>
+						
+					</form>
+				</div>
+				<p class="fst-italic fs-3 fw-bold m-0 mb-1">My Blogs</p>
+				<div id="myBlogContainer" class="mb-2">
+					<!-- Blog -->
+				</div>
+			</div>
+			<div class="col-lg-2 col-1"></div>
+		</div>
+	</div>
+	<script src="https://kit.fontawesome.com/0091f48b02.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="./index.js" type="module"></script>
+</body>
+
+</html>

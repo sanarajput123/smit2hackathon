@@ -1,0 +1,119 @@
+@media only screen and (max-width: 400px) {
+
+    .allBlogs,
+    .userBlogs,
+    .myBlogs {
+        transform: scale(0.6) !important;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .allBlogs,
+    .userBlogs,
+    .myBlogs {
+        transform: scale(0.8) !important;
+    }
+
+    .blogPadd {
+        padding: 5px 0px !important;
+    }
+
+    .headPadd {
+        padding-inline-start: 0px;
+    }
+
+    .profImg {
+        max-width: 175px !important;
+        max-height: 175px !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .allBlogs,
+    .userBlogs,
+    .myBlogs {
+        transform: scale(0.9) !important;
+    }
+
+    .blogPadd {
+        padding: 5px 10px !important;
+    }
+
+    .headPadd {
+        padding-inline-start: 10px;
+    }
+
+    .profImg {
+        max-width: 205px !important;
+        max-height: 205px !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .blogPadd {
+        padding: 10px 50px !important;
+    }
+
+    .headPadd {
+        padding-inline-start: 50px;
+    }
+
+    .profImg {
+        max-width: 200px !important;
+        max-height: 200px !important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .blogPadd {
+        padding: 10px 75px !important;
+    }
+
+    .headPadd {
+        padding-inline-start: 75px;
+    }
+
+    .profImg {
+        max-width: 110px !important;
+        max-height: 110px !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .blogPadd {
+        padding: 15px 80px !important;
+    }
+
+    .headPadd {
+        padding-inline-start: 80px;
+    }
+
+    .profImg {
+        max-width: 125px !important;
+        max-height: 125px !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1488px and up) */
+@media only screen and (min-width: 1488px) {
+    .blogPadd {
+        padding: 20px 100px !important;
+    }
+
+    .headPadd {
+        padding-inline-start: 100px;
+    }
+
+    .profImg {
+        max-width: 150px !important;
+        max-height: 150px !important;
+    }
+}

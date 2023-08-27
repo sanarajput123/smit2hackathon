@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site</title>
+        <link rel="stylesheet" href="./index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+
+    <body class="overflow-x-hidden">
+        <nav class="navbar navbar-expand-lg bg-primary ">
+            <div class="container-fluid mx-5">
+                <a class="navbar-brand fw-semibold text-white" href="./index.html">BLOGGER</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a id="allBtn" class="nav-link text-white" href="./index.html">All Blogs</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-2 ">
+                            <a id="myBtn" class="nav-link text-white" href="./index.html">My Blogs</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a id="currUser" class="nav-link text-white fw-bold">Sign In</a>
+                            <button type="button" class="d-none btn btn-primary" id="goToAuth">Sign In</button>
+                        </li>
+
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item  dropstart">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="" id="avatar"
+                                    width="40" height="40" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="./profile.html">Edit Profile</a>
+                                <a class="dropdown-item link-danger fw-bold" id="signOut">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!--  -->
+        <div class="container bootstrap snippets bootdey">
+            <h1 class="text-primary">Edit Profile</h1>
+            <hr>
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <img id="ava" src="" class="avatar img-circle img-thumbnail" alt="avatar">
+                        <input id="imgIn" type="file" class="form-control" accept="image/jpeg">
+                    </div>
+                </div>
+
+                <!-- edit form column -->
+                <div class="col-md-9 personal-info">
+                    <h3>Personal info</h3>
+
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">First name:</label>
+                            <div class="col-lg-8">
+                                <input id="fName" class="form-control" type="text" value="dey-dey">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Last name:</label>
+                            <div class="col-lg-8">
+                                <input id="lName" class="form-control" type="text" value="bootdey">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Password:</label>
+                            <div class="col-lg-8">
+                                <button type="button" class="btn btn-danger ">Reset password</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--  -->
+        <script src="https://kit.fontawesome.com/0091f48b02.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <script src="./profile.js" type="module"></script>
+    </body>
+
+</html>

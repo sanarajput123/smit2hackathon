@@ -1,0 +1,124 @@
+/* Auth Page */
+.bodyBack {
+    background-image: url("https://img.freepik.com/free-vector/gradient-abstract-technology-background_23-2149213766.jpg?size=626&ext=jpg&ga=GA1.2.1033835131.1692470633&semt=ais") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .signPageBack {
+    justify-content: flex-start;
+    background-image: url("https://img.freepik.com/free-vector/dark-blue-waves-dots-abstract-background_79603-879.jpg?size=626&ext=jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #signContainer {
+    width: 75%;
+    min-height: 100vh;
+    overflow: hidden;
+    align-items: center !important;
+  }
+  
+  #signIn,
+  #signUp {
+    background-color: rgb(255, 255, 255);
+    margin: auto 0px !important;
+    height: 675px !important;
+    align-items: center;
+  }
+  
+  .horRule::before,
+  .horRule::after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    vertical-align: middle;
+    width: 30%;
+  }
+  
+  .colourThemeText {
+    background: -webkit-linear-gradient(#4860e8, #1c0762);
+    background-clip: initial;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  a.colourThemeText:hover,
+  .colourThemeBtn:hover {
+    opacity: 0.75;
+    transform: scale(1.02) !important;
+    transition: linear 0.2s !important;
+  }
+  
+  .colourThemeBtn {
+    background: rgb(#4860e8);
+    background: linear-gradient(90deg, #4860e8 0%, #1c0762 100%);
+  }
+  
+  .moveIn {
+    transition: all 1s linear;
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .moveOut {
+    transition: all 1s linear;
+    transform: scale(0);
+      opacity: 0;
+  }
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {}
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {}
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    body>* {
+      transform: scale(0.85);
+    }
+  
+    /* Auth Page */
+    #signContainer {
+      width: 90%;
+      min-height: 100vh;
+      overflow: hidden;
+      align-items: center !important;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    body>* {
+      transform: scale(0.9);
+    }
+  
+    /* Auth Page */
+    #signContainer {
+      width: 75%;
+      min-height: 100vh;
+      overflow: hidden;
+      align-items: center !important;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1488px and up) */
+  @media only screen and (min-width: 1488px) {
+    body>* {
+      transform: scale(0.9);
+    }
+  
+    /* Auth Page */
+    #signContainer {
+      width: 60%;
+      min-height: 100vh;
+      overflow: hidden;
+      align-items: center !important;
+    }
+  }

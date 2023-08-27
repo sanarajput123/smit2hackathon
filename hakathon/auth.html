@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign In</title>
+        <link rel="stylesheet" href="./auth.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+
+    <body class="overflow-hidden position-relative bodyBack">
+        <img id="loading" src="./static/loading.gif" alt=""
+            class="position-absolute top-50 start-50 translate-middle z-3 d-none">
+        <div id="signContainer" class="d-flex m-auto position-relative">
+            <div id="signIn" class="w-100 d-flex position-absolute moveIn z-3">
+                <div class="w-50 h-100 p-4 d-flex align-items-center signPageBack">
+                    <div class="bg-opacity-50 bg-black rounded p-3 ">
+                        <p class="fs-1 text-white fw-bolder fst-italic text-center">Discover Blogger - Unleash Your
+                            Creativity, Share Your Voice!</p>
+                        <p class="fs-6 text-white fw-medium">At Blogger, we believe in the power of words and the magic
+                            of storytelling. Bring your thoughts to life and
+                            connect with a global audience.</p>
+                    </div>
+                </div>
+                <div class="w-50 h-100 bg-body p-4 d-flex align-items-center">
+                    <form class="w-100">
+                        <center>
+                            <div class="my-3">
+                                <!-- Your Brand -->
+                                <p class="h2 fst-italic fw-bold colourThemeText my-0 p-1">Sign In</p>
+                                <p class="fst-italic text-uppercase">to your account</p>
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" id="addon1"><i class="fa-solid fa-user"></i></span>
+                                <input type="email" class="form-control" placeholder="Email" aria-describedby="addon1"
+                                    id="signInEmail" required>
+                            </div>
+                            <div class="input-group mb-1">
+                                <span class="input-group-text" id="addon2"><i class="fa-solid fa-key"></i></span>
+                                <input type="password" class="form-control border-end-0" placeholder="Password"
+                                    aria-describedby="addon2" id="signInPass" required>
+                                <button type="button" class="input-group-text bg-body hide"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                            <a class="d-block text-end text-decoration-none fw-medium colourThemeText"
+                                id="forgotPass">Forgot
+                                password?</a>
+                            <div class="w-100 d-none form-text text-danger bg-body fw-semibold rounded m-1"
+                                id="accountCheck">
+                                Incorrect email or password
+                            </div>
+                            <button type="button" class="w-100 colourThemeBtn btn btn-primary fw-medium mt-2"
+                                id="signInBtn">CONTINUE</button>
+                            <div class="text-center w-100 my-3">
+                                <span class="horRule"> or </span>
+                            </div>
+                            <div class="btn-group-vertical w-100" role="group">
+                                <button type="button" class="btn btn-danger my-1" id="signInGmail"><i
+                                        class="fa-solid fa-envelope me-2"></i>Login
+                                    with Gmail</button>
+                                <button type="button" class="btn btn-primary my-1" id="signInFb"><i
+                                        class="fa-brands fa-facebook me-2"></i>Login
+                                    with Facebook</button>
+                            </div>
+                            <p>Don't have an account? <a id="goToSignUp"
+                                    class="d-inline-block text-decoration-none fw-medium colourThemeText">Sign
+                                    up</a></p>
+                        </center>
+                    </form>
+                </div>
+            </div>
+            <div id="signUp" class="w-100 d-flex position-absolute moveOut">
+                <div class="w-50 h-100 p-4 d-flex align-items-center signPageBack">
+                    <div class="bg-opacity-50 bg-black rounded p-3 ">
+                        <p class="fs-1 text-white fw-bolder fst-italic text-center">Join us today</p>
+                        <p class="fs-6 text-white fw-medium">
+                            Welcome to Blogger, your creative haven for sharing ideas, stories, and passions. Our
+                            user-friendly platform empowers
+                            you to effortlessly craft and customize captivating blog posts. From personal tales to
+                            expert insights, Blogger offers
+                            the ideal space to express yourself and connect with a global audience.</p>
+                    </div>
+                </div>
+                <div class="w-50 h-100 bg-body p-4 d-flex align-items-center">
+                    <form class="w-100">
+                        <center>
+                            <div class="my-3">
+                                <!-- Your Brand -->
+                                <p class="h2 fst-italic fw-bold colourThemeText p-1 my-0">Sign up</p>
+                                <p class="fst-italic text-uppercase">and join our community</p>
+                            </div>
+                            <div class="input-group mt-0 mb-2">
+                                <span class="input-group-text" id="fName"><i class="fa-solid fa-person"></i></span>
+                                <input type="text" class="form-control rounded-end me-2" placeholder="Firstname"
+                                    aria-describedby="fName" id="signUpFName" maxlength="20" minlength="3" required>
+                                <span class="input-group-text rounded-start" id="lName"><i
+                                        class="fa-solid fa-person"></i></i></span>
+                                <input type="text" class="form-control" placeholder="Lastname" aria-describedby="lName"
+                                    id="signUpLName" maxlength="20" minlength="1" required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" id="email-text"><i class="fa-solid fa-user"></i></span>
+                                <input type="email" class="form-control" placeholder="Email"
+                                    aria-describedby="email-text" id="signUpEmail" required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" id="pass-text1"><i class="fa-solid fa-key"></i></span>
+                                <input type="password" class="form-control border-end-0" placeholder="Password"
+                                    aria-describedby="pass-text1" id="signUpPass" required>
+                                <button type="button" class="input-group-text bg-body hide"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" id="pass-text2"><i class="fa-solid fa-key"></i></span>
+                                <input type="password" class="form-control border-end-0" placeholder="Confirm Password"
+                                    aria-describedby="pass-text2" id="signUpConPass" required>
+                                <button type="button" class="input-group-text bg-body hide"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                            <div class="d-none w-100 form-text text-danger bg-body fw-semibold m-1" id="passCheck">
+                                Passwords do not match
+                            </div>
+                            <button type="button" class="colourThemeBtn btn btn-primary w-100 fw-medium mt-2"
+                                id="signUpBtn">CONTINUE</button>
+                            <div class="text-center w-100 my-2">
+                                <span class="horRule"> or </span>
+                            </div>
+                            <div class="btn-group-vertical w-100" role="group">
+                                <button type="button" class="btn btn-danger m-1"><i class="fa-solid fa-envelope me-2"
+                                        id="signUpGmail"></i>Sign up
+                                    with Gmail</button>
+                                <button type="button" class="btn btn-primary m-1"><i class="fa-brands fa-facebook me-2"
+                                        id="signUpFb"></i>Sign up
+                                    with Facebook</button>
+                            </div>
+                            <p>Already have an account? <a id="goToSignIn"
+                                    class="d-inline-block colourThemeText text-decoration-none fw-medium">Sign
+                                    in</a></p>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/0091f48b02.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <script src="./auth.js" type="module"></script>
+    </body>
+
+</html>
